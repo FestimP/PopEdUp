@@ -1,3 +1,0 @@
-function allstar(params) {
-    return
-}

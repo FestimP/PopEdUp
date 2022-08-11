@@ -1,30 +1,15 @@
 import { useState } from 'react';
 import './App.css';
-// const signUpButton = document.getElementById('signUp');
-// const signInButton = document.getElementById('signIn');
-// const container = document.getElementById('container');
-
-// signUpButton.addEventListener('click', () => {
-// 	container.classList.add("right-panel-active");
-// });
-
-// signInButton.addEventListener('click', () => {
-// 	container.classList.remove("right-panel-active");
-// });
-
 function App() {
   const [baseClass,activeClass] = useState(false);
 
-// function setActiveClass { activeClass(true)}
   return (
 <div className={`container ${baseClass ? "right-panel-active": null} id="container"`}>
 	<div className="form-container sign-up-container">
-		<form action="#">
+		<form action="">
 			<h1>Create Account</h1>
 			<div className="social-container">
-				<a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
-				<a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
-				<a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
+				
 			</div>
 			<span>or use your email for registration</span>
 			<input type="text" placeholder="Name" />
@@ -37,14 +22,12 @@ function App() {
 		<form action="#">
 			<h1>Sign in</h1>
 			<div className="social-container">
-				<a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
-				<a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
-				<a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
+				
 			</div>
 			<span>or use your account</span>
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />
-			<a href="#">Forgot your password?</a>
+			<p>Forgot your password?</p>
 			<button>Sign In</button>
 		</form>
 	</div>
