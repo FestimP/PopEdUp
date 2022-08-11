@@ -1,0 +1,3 @@
+function allstar(params) {
+    return
+}
