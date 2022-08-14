@@ -1,52 +1,32 @@
-import { useState } from 'react';
+import Appes from './components/SignInOut';
 import './App.css';
+import Nav from './components/nav/nav';
+import Contact from "./components/contact/contact";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+} from 'react-router-dom';
 function App() {
-  const [baseClass,activeClass] = useState(false);
 
   return (
-<div className={`container ${baseClass ? "right-panel-active": null} id="container"`}>
-	<div className="form-container sign-up-container">
-		<form action="">
-			<h1>Create Account</h1>
-			<div className="social-container">
-				
-			</div>
-			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button onClick={()=>  activeClass(true)}>Sign Up</button>
-		</form>
-	</div>
-	<div className="form-container sign-in-container">
-		<form action="#">
-			<h1>Sign in</h1>
-			<div className="social-container">
-				
-			</div>
-			<span>or use your account</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<p>Forgot your password?</p>
-			<button>Sign In</button>
-		</form>
-	</div>
-	<div className="overlay-container">
-		<div className="overlay">
-			<div className="overlay-panel overlay-left">
-				<h1>Welcome Back!</h1>
-				<p>To keep connected with us please login with your personal details</p>
-				<button className="ghost" id="signIn"onClick={()=> activeClass(false)}>Sign In</button>
-			</div>
-			<div className="overlay-panel overlay-right">
-				<h1>Hi There!</h1>
-				<p>Enter your personal details to open an account with us</p>
-				<button className="ghost" id="signUp" onClick={()=> activeClass(true)}>Sign Up</button>
-			</div>
-		</div>
-	</div>
-</div>
-    
+	<Router>
+           <div className="App">
+		   <ul>
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="/about">News</a></li>
+  <li><a href="/Contact">Contact</a></li>
+  <li><a href="/about">Sign In/Sign up</a></li>
+</ul>
+           <Routes>
+                 <Route exact path='/' element={<Nav />}></Route>
+                 <Route exact path='/about' element={<Appes />}></Route>
+                 <Route exact path='/Contact' element={< Contact />}></Route>
+          </Routes>
+          </div>
+       </Router>
+	
   );
 }
 
