@@ -6,14 +6,13 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Link
 } from 'react-router-dom';
 function App() {
 
   return (
 	<Router>
            <div className="App">
-		   <ul>
+		   <ul className='cop'>
   <li><a class="active" href="/">Home</a></li>
   <li><a href="/about">News</a></li>
   <li><a href="/Contact">Contact</a></li>
