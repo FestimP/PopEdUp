@@ -1,4 +1,4 @@
-import Appes from './components/SignInOut';
+import Appes from './SignInOut';
 import './App.css';
 import Nav from './components/nav/nav';
 import Contact from "./components/contact/contact";
